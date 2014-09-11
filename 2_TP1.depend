@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1410156865 source:d:\cours\ift339\2_tp1\mot.cpp
+	"mot.h"
+
+1410156865 d:\cours\ift339\2_tp1\mot.h
+	<string>
+
+1410156783 source:d:\cours\ift339\2_tp1\tp1.cpp
+	"librairie.h"
+	"mot.h"
+
+1410156865 d:\cours\ift339\2_tp1\librairie.h
+	<stdio.h>
+	<tchar.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<map>
+	<list>
+	"time.h"
+
