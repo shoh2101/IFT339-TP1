@@ -1,0 +1,31 @@
+#include "dictionnaire.h"
+
+dictionnaire::dictionnaire()
+{
+  //ctor
+}
+
+dictionnaire::~dictionnaire()
+{
+  //dtor
+}
+
+void dictionnaire::ouvrir(string, uint32_t)
+{
+{
+	string ligne;
+	ifstream fichier (path);
+
+	if (fichier.is_open())
+	{
+		for (uint getline (fichier,ligne) )
+		{
+			map_dictionnaire.insert(ligne));
+		}
+		fichier.close();
+	}
+	else cout << "Unable to open file";
+
+	return mots;
+}
+}

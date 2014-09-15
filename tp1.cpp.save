@@ -8,21 +8,21 @@ int main()
 {
 
   dictionnaire le_dictionnaire;
-  uint32_t nb_lettres;
+  uint32_t nb_lettre
   string nom_fichier;
 
   //Récupération de la liste de mot
-
+  
     //Récupération du nom du fichier
-     cout << "Nom du fichier : ";
-      cin>>nom_fichier;
-
+     cout << "Nom du fichier : "; 
+      cin>>nom_fichier; 
+    
     //Récupération du nombre de lettres
-      cout << "Nombre de lettres : ";
-      cin>>nb_lettres;
-
+      cout << "Nombre de lettres : "; 
+      cin>>nb_lettre;
+    
     //Ouverture du dictionnaire
-      le_dictionnaire.ouvrir(nom_fichier,nb_lettres);
+      le_dictionnaire.ouvrir("ODS6.txt");
 
   //Saisie du nombre de lettre du mot à rechercher
 
