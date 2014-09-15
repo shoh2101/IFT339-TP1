@@ -4,17 +4,21 @@
 int main()
 {
 	vector<string> vec_mots;								//Vecteur contenant les mots du scrabble
-	vector<int> vec_choix_correspondant;					//Vecteur contenant les choix correspondants au nombre de lettre desiré
+	vector<int> vec_choix_correspondant;					//Vecteur contenant les mots correspondants au nombre de lettre desiré
+	vector<int> vec_lettre_correpondant;					//Vecteur contenant les essaie correspondants aux lettre du mot cible
 	map<mot,list<mot>> dictionnaire;						//Map contenant les objets de type mot et leur liste correspondante
 	int int_nb_lettre;										//Variable contenant le nombre de lettre désiré par l'utilisateur
 	int int_indice_mot_choisit;								//Variable contenant le mot choisi correspondant au critère
 	string str_mot_cible;									//Le mot ciblé par le programme
-	string str_lettre_disponible("ABCDEFGHIJKLMNOPQRVWXYZ");//Lettres disponibles au démarrage 
-	string str_lettre_utilisee;								//Lettres utilisée par l'utilisateur
-	string str_mot_cache;									//Le mot caché dans sont état actuel du jeu ( lettre dévcouvertes et non découvertes)
+	string str_lettre_disponible("ABCDEFGHIJKLMNOPQRVWXYZ");//Lettres disponibles
+	string str_lettre_utilise;								//Lettres utilisées
+	string str_solution;									//Solution en cours (lettres trouvées de str_mot_choisit)
+	char c_essaie;											//Le caractère choisit par l'utilisateur
 
-	vec_mots = lireFichier("ODS6.txt"); //Récupération de la liste de mot
+	//Récupération de la liste de mot
+	vec_mots = lireFichier("ODS6.txt"); 
 
+	//Saisie du nombre de lettre du mot à rechercher
 	cout << "Nombre de lettres : "; cin>>int_nb_lettre;
 
 	//Création d'un vecteur contant l'indice des mots correspondants à la taille demandé
@@ -34,15 +38,36 @@ int main()
 
 	//Initialisation du mot caché
 	for(int i=0; i<str_mot_cible.size(); i++)
-		str_mot_cache.push_back('-');
+		str_solution.push_back('-');
 
-	system("cls");
-	cout<<"--- Bonne chance ! ---"<<"\n\n";
-	cout<<"Les lettres disponibles : "<<str_lettre_disponible<<endl;
-	cout<<"Les lettres utilisees : "<<str_lettre_utilisee<<endl;
+	do
+	{
+		system("cls");
+		cout<<"--- Bonne chance ! ---"<<"\n\n";
+		cout<<"Les lettres disponibles : "<<str_lettre_disponible<<endl;
+		cout<<"Les lettres utilisees : "<<str_lettre_utilise<<endl;
+		cout<<"Le mot cache : "<<str_solution<<endl;
+		cout<<"Le mot cache : "<<str_mot_cible<<endl;
 
-	cout<<"Le mot cache : "<<str_mot_cache<<endl;
+		//Saise de la lettre 
+		cout<<"Essaie : "; cin>>c_essaie;
+		c_essaie = (toupper(c_essaie));
 
+		//Mise à jour des lettres utilisées
+		if(str_lettre_utilise.find(c_essaie) > str_lettre_utilise.size())
+			str_lettre_utilise.push_back(c_essaie);
+		//Mise à jour des lettres disponibles
+		if(str_lettre_disponible.find(c_essaie) <= str_lettre_disponible.size())
+		  str_lettre_disponible.erase(str_lettre_disponible.find(c_essaie),1);
+
+		//Recherche des présences de l'essaie dans le mot cible
+		vec_lettre_correpondant.clear();
+		for(int i=0; i<str_mot_cible.size();i++)
+		  if(str_mot_cible[i] == c_essaie)
+		    vec_lettre_correpondant.push_back(i);
+
+	}while(c_essaie != '#');
+	
 	system("pause");
 	return 0;
 }
