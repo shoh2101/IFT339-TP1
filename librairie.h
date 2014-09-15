@@ -1,3 +1,6 @@
+#ifndef LIBRAIRIE_H
+#define LIBRAIRIE_H
+
 #pragma once
 #include <stdio.h>
 #include <tchar.h>
@@ -25,9 +28,10 @@ vector<string> lireFichier (string path)
 		}
 		fichier.close();
 	}
-	else cout << "Unable to open file"; 
+	else cout << "Unable to open file";
 
 	return mots;
 }
 
 
+#endif // LIBRAIRIE_H

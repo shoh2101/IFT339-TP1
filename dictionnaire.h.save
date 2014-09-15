@@ -1,0 +1,20 @@
+#ifndef DICTIONNAIRE_H
+#define DICTIONNAIRE_H
+
+
+class dictionnaire
+{
+  public:
+    dictionnaire();
+    ~dictionnaire();
+  
+  private:
+
+  
+
+
+
+
+};
+
+#endif // DICTIONNAIRE_H

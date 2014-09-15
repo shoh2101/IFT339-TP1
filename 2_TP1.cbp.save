@@ -32,9 +32,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="2_TP1.cbp" />
 		<Unit filename="ODS6.txt" />
+		<Unit filename="dictionnaire.cpp" />
+		<Unit filename="dictionnaire.h" />
 		<Unit filename="librairie.h" />
+		<Unit filename="manipulateur.cpp" />
+		<Unit filename="manipulateur.h" />
 		<Unit filename="mot.cpp" />
 		<Unit filename="mot.h" />
 		<Unit filename="tp1.cpp" />

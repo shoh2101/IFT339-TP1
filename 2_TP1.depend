@@ -20,3 +20,39 @@
 	<list>
 	"time.h"
 
+1410802951 source:d:\github\ift339-tp1\mot.cpp
+	"mot.h"
+
+1410805018 d:\github\ift339-tp1\mot.h
+	<string>
+
+1410802722 source:d:\github\ift339-tp1\tp1.cpp
+	"librairie.h"
+	"mot.h"
+
+1410805158 d:\github\ift339-tp1\librairie.h
+	<stdio.h>
+	<tchar.h>
+	<iostream>
+	<fstream>
+	<string>
+	<vector>
+	<map>
+	<list>
+	"time.h"
+
+1410803588 source:d:\github\ift339-tp1\dictionnaire.cpp
+	"dictionnaire.h"
+
+1410803705 d:\github\ift339-tp1\dictionnaire.h
+	<map>
+	<set>
+	"mot.h"
+
+1410804762 source:d:\github\ift339-tp1\manipulateur.cpp
+	"manipulateur.h"
+
+1410805395 d:\github\ift339-tp1\manipulateur.h
+	<string>
+	"mot.h"
+

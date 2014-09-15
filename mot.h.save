@@ -12,8 +12,7 @@ class mot : public string
 
 	  bool operator==(mot);
 		mot(void);
-		mot(string);
-		mot(uint32_t);
+		mot(string
 		~mot(void);
 };
 
