@@ -14,24 +14,7 @@
 
 using namespace std;
 
-vector<string> lireFichier (string path)
-{
-	string ligne;
-	ifstream fichier (path);
-	vector<string> mots;
 
-	if (fichier.is_open())
-	{
-		while ( getline (fichier,ligne) )
-		{
-			mots.push_back(ligne);
-		}
-		fichier.close();
-	}
-	else cout << "Unable to open file";
-
-	return mots;
-}
 
 
 #endif // LIBRAIRIE_H
