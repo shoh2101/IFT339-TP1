@@ -36,3 +36,5 @@ void dictionnaire::ouvrir(string ods6, uint32_t taille_mot)
 	else cout << "Unable to open file";
 
 }
+
+
