@@ -7,14 +7,14 @@ using namespace std;
 class mot : public string
 {
 
-	public:
+public:
 
 
-	  bool operator==(mot);
-		mot(void);
-		mot(string);
-		mot(uint32_t);
-		~mot(void);
+    bool operator==(mot);
+    mot(void);
+    mot(string);
+    mot(uint32_t);
+    ~mot(void);
 };
 
 #endif // MOT_H

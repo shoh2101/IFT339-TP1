@@ -34,3 +34,13 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+2_TP1.layout
+2_TP1.layout.save
+2_TP1.cbp
+2_TP1.depend
+*.depend
+2_TP1.depend
+bin/Debug/2_TP1.exe
+obj/Debug/dictionnaire.o
+*.o

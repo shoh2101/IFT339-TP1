@@ -7,7 +7,8 @@
 
 dictionnaire::dictionnaire()
 {
-  //ctor
+  map_dictionnaire = map< uint32_t, mot >();
+  map_associative = map< mot, set < mot > >();
 }
 
 dictionnaire::~dictionnaire()
@@ -35,3 +36,5 @@ void dictionnaire::ouvrir(string ods6, uint32_t taille_mot)
 	else cout << "Unable to open file";
 
 }
+
+

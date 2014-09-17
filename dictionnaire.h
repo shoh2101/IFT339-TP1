@@ -8,20 +8,36 @@
 
 class dictionnaire
 {
-  public:
+public:
 
-    //Manipulateur: implémenté par le dictionnaire
 
-  void ouvrir(string,uint32_t);  //Ouvrir le fichier indiqué par le string et récupérer les mots de longueur uint32_t
+    void ouvrir(string,uint32_t);  //Ouvrir le fichier indiqué par le string et récupérer les mots de longueur uint32_t
 
     dictionnaire();
     ~dictionnaire();
 
-  private:
+    void actualiser_lettres(char); // Retire la lettre des lettres disponibles et ajoute la lettre aux lettrres utilisées
+    bool lettre_presente(char);    // Vérifie si le char est présent dans le mot cible
 
-  map< uint32_t, mot > map_dictionnaire;      // ensemble des mots tirés du fichier ODS6
-  map< mot, set < mot > > map_associative;    // ensemble des mots utilisés lors de la triche
+
+
+
+private:
+
+    map< uint32_t, mot > map_dictionnaire;      // ensemble des mots tirés du fichier ODS6
+    map< mot, set < mot > > map_associative;    // ensemble des mots utilisés lors de la triche
+
+
+    string disponibles;         //lettres disponibles
+    string utilisees;           //lettres utilisées
+    string etat_actuel;         //mot tel qu'affiché, tel que trouvé actuellement
+    uint32_t indice_mot_cible;
+    mot mot_aleatoire();        // Génère un indice aléatoire et en retourne le mot associé
+    void comparer(char);        // Compare le char avec le mot cible, vérifie si la lettre est
+    // présente, met à jour l'affichage des lettres, etc
 
 };
+
+
 
 #endif // DICTIONNAIRE_H
