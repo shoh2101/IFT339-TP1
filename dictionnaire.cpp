@@ -7,7 +7,8 @@
 
 dictionnaire::dictionnaire()
 {
-  //ctor
+  map_dictionnaire = map< uint32_t, mot >();
+  map_associative = map< mot, set < mot > >();
 }
 
 dictionnaire::~dictionnaire()
